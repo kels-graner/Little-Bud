@@ -4,7 +4,7 @@ const PlantCard = ({ info }) => {
   //add functions here
   const handleDelete = (event) => {
     const id = event.target.id;
-    const idNoSpaces = id.replace(/\s+/g, '');
+    const idNoSpaces = id.replace(/\s+/g, '-');
     const uri = `/api/${idNoSpaces}`;
     const details = { method: 'DELETE' };
     console.log(uri)

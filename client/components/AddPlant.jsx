@@ -25,7 +25,7 @@ const AddPlant = () => {
         <h3>Ohhhhhh baby! Is that a new plant??</h3>
       </div>
       <form>
-        <input id="inputInfo" type="text" />
+        <input id="inputInfo" type="text" placeholder="Type common name here..."/>
         <input id="addPlantButton" type="submit" value="Add new plant" onClick={handleClick} />
       </form>
     </div>

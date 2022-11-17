@@ -52,9 +52,11 @@ plantController.addPlant = (req, res, next) => {
   },
 
   plantController.deletePlant = (req, res, next) => {
-    console.log('in delete plant controller ' + req.params.name)
-    // Plant.findOneAndDelete( { _id: '63759ed578b1e85c419a1634' })
-    Plant.findOneAndDelete({common_name: req.params.name},
+    const str = req.params.name;
+    const strWithSpace = str.replace(/-/g, ' ');
+    console.log('in delete plant controller ' + strWithSpace);
+    
+    Plant.findOneAndDelete({common_name: strWithSpace},
       (err, deletedPlant) => {
         if (err) {
           return next({

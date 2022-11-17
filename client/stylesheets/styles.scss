@@ -107,9 +107,11 @@ body {
     background-color: rgb(245, 168, 138);
     color: black;
     font-weight: bolder;
-    :hover {
+    
+  }
+
+  button:hover {
       cursor: pointer;
-    }
   }
 }
 
@@ -160,12 +162,12 @@ body {
   form {
 
     #inputInfo {
-      height: 34px;
+      height: 17px;
       width: 300px;
       margin: 0 10px 0 10px;
       border: 1.5px solid black;
       border-radius: 4px;
-      padding: 0 10px 0 0;
+      padding: 15px;
     }
 
     #addPlantButton {
@@ -176,5 +178,8 @@ body {
       border-radius: 7px;
       background-color: rgb(245, 168, 138);
     }
+    #addPlantButton:hover {
+      cursor: pointer;
+  }
   }
 }
