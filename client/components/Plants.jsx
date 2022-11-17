@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import PlantCard from './PlantCard.jsx';
+import Headers from './Headers.jsx';
 
 class Plants extends Component {
   constructor(props) {
@@ -37,13 +39,21 @@ class Plants extends Component {
 
 
     return (
-      <section className="myPlants">
-        <header className="myPlantsHeader">
-          <h2>My Plants</h2>
-        </header>
-        <div className="plantContainer">
-          {plantElems}
-        </div>
+      <section className="mainSection">
+      <Headers />
+      <Link to={'/addPlant'}>
+        <button
+          type="button"
+          className="linkButton">Add New Plants</button>
+      </Link>
+        <section className="myPlants">
+          <header className="myPlantsHeader">
+            <h2>My Plants</h2>
+          </header>
+          <div className="plantContainer">
+            {plantElems}
+          </div>
+        </section>
       </section>
     );
   }

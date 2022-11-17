@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Headers from './components/Headers.jsx';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Plants from './components/Plants.jsx';
 import AddPlant from './components/AddPlant.jsx';
 
@@ -9,10 +9,24 @@ function App() {
   //add functionality here
 
   return (
-    <div>
-      <Headers />
+    <div className='router'>
+      <main>
+        <Switch>
+          <Route
+            exact
+            path='/'
+            component={Plants}
+            />
+            <Route
+              exact
+              path='/addPlant'
+              component={AddPlant}
+              />        
+            </Switch>
+      </main>
+      {/* <Headers />
       <AddPlant />
-      <Plants />
+      <Plants /> */}
     </div>
   )
 }

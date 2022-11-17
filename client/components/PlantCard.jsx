@@ -47,7 +47,7 @@ const PlantCard = ({ info }) => {
         <li className="plantListItem"><span className="label">Tolerated Light:</span> {tolerated_light}</li>
         <li className="plantListItem"><span className="label">Water Needs:</span> {water_needs}</li>
       </ul>
-      <button className="deleteButton" id={common_name} onClick={handleDelete}>Delete Plant</button>
+      <button className="deleteButton" id={common_name} onClick={handleDelete} type="button">Delete Plant</button>
     </div>
   )
 }
