@@ -53,9 +53,7 @@ plantController.addPlant = (req, res, next) => {
 
   plantController.deletePlant = (req, res, next) => {
     const str = req.params.name;
-    const strWithSpace = str.replace(/-/g, ' ');
-    console.log('in delete plant controller ' + strWithSpace);
-    
+    const strWithSpace = str.replace(/-/g, ' '); 
     Plant.findOneAndDelete({common_name: strWithSpace},
       (err, deletedPlant) => {
         if (err) {

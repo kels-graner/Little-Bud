@@ -6,7 +6,7 @@ const apiController = require('../controllers/apiController')
 
 const router = express.Router();
 
-router.get('/:name', //send to /api/common name
+router.post('/:name', //send to /api/common name
   apiController.getNewPlant,
   plantController.addPlant,
   (req, res) => res.status(200).json(res.locals.newPlant));

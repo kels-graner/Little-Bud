@@ -7,7 +7,6 @@ const PlantCard = ({ info }) => {
     const idNoSpaces = id.replace(/\s+/g, '-');
     const uri = `/api/${idNoSpaces}`;
     const details = { method: 'DELETE' };
-    console.log(uri)
     fetch(uri, details)
       .then(response => {
         if (response !== 200) {
@@ -18,6 +17,7 @@ const PlantCard = ({ info }) => {
           return;
         }
       })
+    window.location.reload();
   }
 
   const {
