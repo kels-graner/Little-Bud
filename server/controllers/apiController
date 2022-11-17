@@ -1,0 +1,24 @@
+const fetch = require('node-fetch');
+
+const apiController = {};
+
+apiController.getNewPlant = (req, res, next) => {
+  const commonName = req.params.name;
+  fetch(`https://house-plants.p.rapidapi.com/common/${commonName}`,{
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'c083a8c25cmsh21b0060ca57b929p1a1ecfjsn07805cd2e18a',
+      'X-RapidAPI-Host': 'house-plants.p.rapidapi.com'
+    }
+  })
+    .then(data => data.json())
+    .then(parsedData => {
+      res.locals.newPlantInfo = parsedData[0];
+      return next();
+    })
+    .catch(() => {
+      return next({err: 'ERROR: apiController.getNewPlant'})
+    })
+}
+
+module.exports = apiController;

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+
+body {
+  background-color: #acd38c;
+  background-image: url(../images/plant.png);
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', cursive;
+  color: black;
+}
+
+
+//HEADER SECTION
+.headers {
+  background-color: whitesmoke;
+  padding: 10px 0 10px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  font-family: 'Patrick Hand SC', cursive;
+  border-bottom: 4px solid rgb(9, 63, 9);
+
+  h1 {
+    font-size: 60px;
+    margin: 0;
+    color: rgb(92, 47, 4);
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 0;
+    color: black;
+
+    span {
+      color: #367a45;
+      font-size: 25px;
+    }
+  }
+
+  img {
+    height: 160px;
+    width: 140px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logodiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
+
+//EACH PLANT CARD
+.plantCard {
+  background-color: whitesmoke;
+  width: 450px;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 4px solid rgb(9, 63, 9);
+  padding-right: 20px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 5px grey;
+
+  .cardHeader {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 0;
+
+    h3 {
+      font-family: 'Josefin Sans', cursive;
+      font-size: 35px;
+      color: rgb(92, 47, 4);
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    line-height: 30px;
+
+    li {
+
+      .label {
+        font-size: 19px;
+        color: rgb(92, 47, 4);
+      }
+    }
+  }
+
+  button {
+    height: 35px;
+    width: 120px;
+    font-family: 'Josefin Sans', cursive;
+    font-size: 16px;
+    border-radius: 7px;
+    border: 2px solid rgb(9, 63, 9);
+    background-color: rgb(245, 168, 138);
+    color: black;
+    font-weight: bolder;
+    :hover {
+      cursor: pointer;
+    }
+  }
+}
+
+
+//SECTION THAT HOLDS ALL THE PLANT CARDS
+.myPlants {
+
+  .myPlantsHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-family: 'Josefin Sans', cursive;
+      font-size: 45px;
+      color: rgb(9, 63, 9);
+    }
+  }
+
+  .plantContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px
+  }
+}
+
+
+
+//ADD A PLANT SECTION
+.addPlant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+
+  .addHeader {
+
+    h3 {
+      font-family: 'Josefin Sans', cursive;
+      font-size: 35px;
+      color: #367a45;
+    }
+  }
+
+  form {
+
+    #inputInfo {
+      height: 34px;
+      width: 300px;
+      margin: 0 10px 0 10px;
+      border: 1.5px solid black;
+      border-radius: 4px;
+      padding: 0 10px 0 0;
+    }
+
+    #addPlantButton {
+      height: 40px;
+      width: 170px;
+      font-family: 'Josefin Sans', cursive;
+      font-size: 18px;
+      border-radius: 7px;
+      background-color: rgb(245, 168, 138);
+    }
+  }
+}
