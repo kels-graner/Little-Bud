@@ -26,11 +26,11 @@ const AddPlant = () => {
     <Headers />
     <Link to="/" className="backLink">
           <button type="button" className="backButton">
-              Back to My Plants
+              Back to My Plants...
           </button>
         </Link>
       <div className="addHeader">
-        <h3>Ohhhhhh baby! Is that a new plant??</h3>
+        <h3>Wow! Would ya look at the leaves on that one!</h3>
       </div>
       <form>
         <input id="inputInfo" type="text" placeholder="Type common name here..."/>

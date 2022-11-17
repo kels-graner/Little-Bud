@@ -40,12 +40,15 @@ class Plants extends Component {
 
     return (
       <section className="mainSection">
-      <Headers />
-      <Link to={'/addPlant'}>
-        <button
-          type="button"
-          className="linkButton">Add New Plants</button>
-      </Link>
+        <Headers />
+        <div className="newPlantSection">
+          <h3>Ohhhhhh baby! Is that a new plant??</h3>
+          <Link to={'/addPlant'}>
+            <button
+              type="button"
+              className="linkButton">Add New Plant...</button>
+          </Link>
+        </div>
         <section className="myPlants">
           <header className="myPlantsHeader">
             <h2>My Plants</h2>
