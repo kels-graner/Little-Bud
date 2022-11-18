@@ -59,7 +59,7 @@ body {
 .plantCard {
   background-color: whitesmoke;
   width: 450px;
-  height: 390px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -94,7 +94,15 @@ body {
         font-size: 19px;
         color: rgb(92, 47, 4);
       }
+
+      .lastWater {
+        color: #5794ea;
+      }
     }
+  }
+
+  .lastWater {
+    color: #8ab7f5;
   }
 
   button {
@@ -108,6 +116,10 @@ body {
     color: black;
     font-weight: bolder;
 
+  }
+
+  .wateredButton {
+    background-color: #8ab7f5;
   }
 
   button:hover {
@@ -171,6 +183,7 @@ body {
     border-radius: 7px;
     background-color: #8ab7f5;
   }
+
   .linkButton:hover {
     cursor: pointer;
   }
@@ -190,7 +203,7 @@ body {
 
     h3 {
       font-family: 'Josefin Sans', cursive;
-      font-size: 35px;
+      font-size: 40px;
       color: #367a45;
     }
   }
@@ -198,8 +211,8 @@ body {
   form {
 
     #inputInfo {
-      height: 17px;
-      width: 300px;
+      height: 20px;
+      width: 350px;
       margin: 0 10px 0 10px;
       border: 1.5px solid black;
       border-radius: 4px;
@@ -207,8 +220,8 @@ body {
     }
 
     #addPlantButton {
-      height: 40px;
-      width: 170px;
+      height: 50px;
+      width: 200px;
       font-family: 'Josefin Sans', cursive;
       font-size: 18px;
       border-radius: 7px;
@@ -232,5 +245,13 @@ body {
 
   .backButton:hover {
     cursor: pointer;
+  }
+
+  #congrats {
+    display: none;
+    font-family: 'Josefin Sans', cursive;
+    font-size: 30px;
+    color: #4c281a;
+    margin-top: 40px;
   }
 }

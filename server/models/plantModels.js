@@ -42,6 +42,9 @@ const PlantSchema = mongoose.Schema({
   },
   common_diseases: {
     type: String
+  },
+  last_watered: {
+    type: Number
   }
 });
 

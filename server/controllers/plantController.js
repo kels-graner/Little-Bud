@@ -16,7 +16,8 @@ plantController.addPlant = (req, res, next) => {
     ideal_light: newPlantInfo.ideallight,
     tolerated_light: newPlantInfo.toleratedlight,
     water_needs: newPlantInfo.watering,
-    common_diseases: newPlantInfo.diseases
+    common_diseases: newPlantInfo.diseases,
+    last_watered: 5184000,
   },
     (err, newPlant) => {
       if (err) {
@@ -53,8 +54,8 @@ plantController.addPlant = (req, res, next) => {
 
   plantController.deletePlant = (req, res, next) => {
     const str = req.params.name;
-    const strWithSpace = str.replace(/-/g, ' '); 
-    Plant.findOneAndDelete({common_name: strWithSpace},
+    const strWithSpace = str.replace(/-/g, ' ');
+    Plant.findOneAndDelete({ common_name: strWithSpace },
       (err, deletedPlant) => {
         if (err) {
           return next({
@@ -70,6 +71,26 @@ plantController.addPlant = (req, res, next) => {
       });
   },
 
-  
+  plantController.updatePlant = (req, res, next) => {
+    const str = req.params.name;
+    const strWithSpace = str.replace(/-/g, ' ');
+    const currentTime = Date.now();
+    Plant.findOneAndUpdate({ common_name: strWithSpace }, { $set: { last_watered: currentTime } }, { new: true },
+      (err, updatedPlant) => {
+        if (err) {
+          return next({
+            log: 'Error in plantController.updatePlant',
+            status: 400,
+            message: { err: 'Error in plantController.updatePlant' },
+          }
+          );
+        } else {
+          res.locals.updatedPlant = updatedPlant;
+          return next();
+        }
+      });
+  },
 
-  module.exports = plantController;
+
+
+module.exports = plantController;

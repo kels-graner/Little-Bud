@@ -15,6 +15,10 @@ router.delete('/:name',
   plantController.deletePlant,
   (req, res) => res.status(200).json(res.locals.deletedPlant));
 
+router.patch('/:name',
+  plantController.updatePlant,
+  (req, res) => (req, res) => res.status(200).json(res.locals.updatedPlant));
+
 router.get('/', //send to /api
   plantController.getAllPlants,
   (req, res) => res.status(200).json(res.locals.foundPlants));
