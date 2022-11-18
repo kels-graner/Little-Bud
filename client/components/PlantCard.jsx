@@ -1,7 +1,6 @@
 import React from "react";
 
 const PlantCard = ({ info }) => {
-  //add functions here
   const handleDelete = (event) => {
     const id = event.target.id;
     const idNoSpaces = id.replace(/\s+/g, '-');
@@ -51,12 +50,10 @@ const PlantCard = ({ info }) => {
   } = info;
 
   return (
-    //commong[0] gives you name
     <div className="plantCard">
       <div className="cardHeader">
         <h3 className="plantName">{common_name}</h3>
       </div>
-      <button className="wateredButton" id={common_name} onClick={handleWater} type="button">Just Watered</button>
       <ul className="plantListOfInfo">
         <li className="plantListItem"><span className="label">Latin Name:</span> {latin_name}</li>
         <li className="plantListItem"><span className="label">Category:</span> {category}</li>
@@ -67,7 +64,10 @@ const PlantCard = ({ info }) => {
         <li className="plantListItem"><span className="label">Water Needs:</span> {water_needs}</li>
         <li className="plantListItem"><span className="label lastWater">Last Watered:</span> {Math.floor((Date.now() - last_watered) / 86400000)} days ago</li>
       </ul>
-      <button className="deleteButton" id={common_name} onClick={handleDelete} type="button">Delete Plant</button>
+      <div className="buttons">
+        <button className="wateredButton" id={common_name} onClick={handleWater} type="button">Just Watered</button>
+        <button className="deleteButton" id={common_name} onClick={handleDelete} type="button">Delete Plant</button>
+      </div>
     </div>
   )
 }

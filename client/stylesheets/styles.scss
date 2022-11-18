@@ -101,6 +101,12 @@ body {
     }
   }
 
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+  }
+
   .lastWater {
     color: #8ab7f5;
   }
@@ -187,6 +193,8 @@ body {
   .linkButton:hover {
     cursor: pointer;
   }
+
+  
 }
 
 
